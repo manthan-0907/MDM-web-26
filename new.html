@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <title>Manthan Dhapke CM25091</title>
+
+    <title>Product Showcase</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        
+        .hero-image {
+            background: linear-gradient(
+                135deg,
+                #818cf8,
+                #c084fc
+            );
+        }
+
+    
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.03);
+        }
+
+    
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- ================= HEADER ================= -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-5
+                    flex flex-col sm:flex-row
+                    items-center justify-between gap-4">
+
+            <!-- Logo -->
+            <h1 class="text-3xl font-bold text-indigo-600">
+                NOVA
+            </h1>
+
+            <!-- Navigation -->
+            <nav class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="hover:text-indigo-600">
+                    Home
+                </a>
+
+                <a href="#products" class="hover:text-indigo-600">
+                    Products
+                </a>
+
+                <a href="#" class="hover:text-indigo-600">
+                    About
+                </a>
+
+                <a href="#" class="hover:text-indigo-600">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Button -->
+            <button class="bg-indigo-600 text-white
+                           px-5 py-2 rounded-lg
+                           hover:bg-indigo-700">
+                Shop Now
+            </button>
+        </div>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600
+                    text-white">
+
+        <div class="max-w-7xl mx-auto px-4 py-16
+                    flex flex-col md:flex-row
+                    items-center justify-between gap-10">
+
+            <!-- Hero Text -->
+            <div class="w-full md:w-1/2
+                        text-center md:text-left">
+
+                <p class="uppercase tracking-widest
+                          text-indigo-200 mb-3">
+                    New Collection
+                </p>
+
+                <h2 class="hero-title text-5xl
+                           font-bold leading-tight mb-5">
+                    Discover Your Style
+                </h2>
+
+                <p class="text-lg text-indigo-100
+                          max-w-lg mx-auto md:mx-0 mb-7">
+                    Explore our latest collection of stylish,
+                    modern and comfortable products designed
+                    for everyday life.
+                </p>
+
+                <a href="#products"
+                   class="inline-block bg-white
+                          text-indigo-600 font-semibold
+                          px-7 py-3 rounded-lg
+                          hover:bg-gray-100">
+                    Explore Collection
+                </a>
+            </div>
+
+
+            <!-- Hero Image -->
+            <div class="w-full md:w-1/2
+                        flex justify-center">
+
+                <div class="hero-image w-full max-w-md
+                            h-64 sm:h-80 rounded-2xl
+                            flex items-center justify-center">
+
+                    <span class="text-8xl">
+                        🛍️
+                    </span>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+    <main id="products"
+          class="max-w-7xl mx-auto px-4 py-16">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-12">
+
+            <p class="text-indigo-600 font-semibold
+                      uppercase tracking-wide">
+                Our Products
+            </p>
+
+            <h2 class="text-4xl font-bold mt-2">
+                Featured Collection
+            </h2>
+
+            <p class="text-gray-500 mt-3">
+                Discover our latest and most popular products.
+            </p>
+        </div>
+
+
+        <!-- Product Container -->
+        <div class="flex flex-col md:flex-row
+                    flex-wrap justify-center gap-8">
+
+
+            <!-- ========== PRODUCT 1 ========== -->
+            <div class="product-card bg-white
+                        rounded-2xl overflow-hidden
+                        shadow-md w-full md:w-[45%] lg:w-[30%]">
+
+                <div class="product-image bg-pink-100
+                            h-56 flex items-center justify-center">
+
+                    <span class="text-8xl">
+                        👟
+                    </span>
+
+                </div>
+
+                <div class="p-6">
+
+                    <p class="text-sm text-indigo-600
+                              font-semibold">
+                        FOOTWEAR
+                    </p>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        Urban Sneakers
+                    </h3>
+
+                    <p class="text-gray-500 mt-3">
+                        Lightweight sneakers designed for
+                        everyday comfort and modern style.
+                    </p>
+
+                    <div class="flex items-center
+                                justify-between mt-6">
+
+                        <span class="text-2xl font-bold">
+                            ₹799
+                        </span>
+
+                        <button class="bg-indigo-600
+                                       text-white px-4 py-2
+                                       rounded-lg
+                                       hover:bg-indigo-700">
+                            Add to Cart
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ========== PRODUCT 2 ========== -->
+            <div class="product-card bg-white
+                        rounded-2xl overflow-hidden
+                        shadow-md w-full md:w-[45%] lg:w-[30%]">
+
+                <div class="product-image bg-blue-100
+                            h-56 flex items-center justify-center">
+
+                    <span class="text-8xl">
+                        🎧
+                    </span>
+
+                </div>
+
+                <div class="p-6">
+
+                    <p class="text-sm text-indigo-600
+                              font-semibold">
+                        TECHNOLOGY
+                    </p>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        Wireless Headphones
+                    </h3>
+
+                    <p class="text-gray-500 mt-3">
+                        Enjoy immersive sound with comfortable
+                        wireless headphones.
+                    </p>
+
+                    <div class="flex items-center
+                                justify-between mt-6">
+
+                        <span class="text-2xl font-bold">
+                            ₹1299
+                        </span>
+
+                        <button class="bg-indigo-600
+                                       text-white px-4 py-2
+                                       rounded-lg
+                                       hover:bg-indigo-700">
+                            Add to Cart
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ========== PRODUCT 3 ========== -->
+            <div class="product-card bg-white
+                        rounded-2xl overflow-hidden
+                        shadow-md w-full md:w-[45%] lg:w-[30%]">
+
+                <div class="product-image bg-green-100
+                            h-56 flex items-center justify-center">
+
+                    <span class="text-8xl">
+                        ⌚
+                    </span>
+
+                </div>
+
+                <div class="p-6">
+
+                    <p class="text-sm text-indigo-600
+                              font-semibold">
+                        ACCESSORIES
+                    </p>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        Smart Watch
+                    </h3>
+
+                    <p class="text-gray-500 mt-3">
+                        Track your day with a stylish smartwatch
+                        featuring fitness and productivity tools.
+                    </p>
+
+                    <div class="flex items-center
+                                justify-between mt-6">
+
+                        <span class="text-2xl font-bold">
+                            ₹999
+                        </span>
+
+                        <button class="bg-indigo-600
+                                       text-white px-4 py-2
+                                       rounded-lg
+                                       hover:bg-indigo-700">
+                            Add to Cart
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="bg-gray-900 text-white">
+
+        <div class="max-w-5xl mx-auto px-4 py-14
+                    flex flex-col md:flex-row
+                    items-center justify-between gap-6">
+
+            <div class="text-center md:text-left">
+
+                <h2 class="text-2xl font-bold">
+                    Stay Updated
+                </h2>
+
+                <p class="text-gray-400 mt-2">
+                    Subscribe for new product updates and offers.
+                </p>
+
+            </div>
+
+            <form class="flex flex-col sm:flex-row
+                         gap-3 w-full md:w-auto">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="px-4 py-3 rounded-lg
+                           text-gray-900 outline-none
+                           w-full sm:w-64">
+
+                <button
+                    type="submit"
+                    class="bg-indigo-600 px-6 py-3
+                           rounded-lg font-semibold
+                           hover:bg-indigo-700">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-950 text-gray-400
+                   text-center py-6">
+
+        <p>
+            &copy; 2026 Nova Collection.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
