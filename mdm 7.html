@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department of Computer Science — Student Help Portal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#161b22',
+          rust: '#b45737',
+          sand: '#f6f1e9',
+        },
+        fontFamily: {
+          serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .answer-panel{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+  .answer-panel.open{
+    grid-template-rows: 1fr;
+  }
+  .answer-panel > div{
+    overflow: hidden;
+  }
+  .mark{ transition: transform 0.2s ease; }
+  .faq-item.open .mark{ transform: rotate(45deg); }
+</style>
+</head>
+<body class="bg-sand text-ink font-serif">
+
+<header class="max-w-3xl mx-auto px-6 pt-16 pb-10 border-b border-ink/10">
+  <p class="text-rust text-sm tracking-wide mb-2">Department of Computer Science</p>
+  <h1 class="text-4xl font-medium max-w-md mb-4">Student Help Portal</h1>
+  <p class="font-sans text-ink/60 max-w-md leading-relaxed">
+    Answers to the questions we hear most, from registration to research placements. Can't find what you need? Reach out to the department office.
+  </p>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 py-10 pb-24">
+
+  <div class="mb-10">
+    <input
+      id="search"
+      type="text"
+      placeholder="Search questions, e.g. 'transcript' or 'add/drop'"
+      class="w-full font-sans text-sm px-4 py-3 bg-white border border-ink/15 rounded focus:outline-none focus:border-rust transition-colors"
+    >
+  </div>
+
+  <div id="faq-container">
+
+    <section class="mb-2">
+      <p class="font-sans text-xs uppercase tracking-widest text-rust mb-2">Registration &amp; Enrollment</p>
+      <ul class="faq-list border-t border-ink/10">
+
+        <li class="faq-item border-b border-ink/10">
+          <button class="faq-question w-full flex items-center justify-between gap-4 text-left py-4" aria-expanded="false">
+            <span class="text-lg">How do I add or drop a course after the semester begins?</span>
+            <span class="mark font-sans text-rust text-xl leading-none shrink-0">+</span>
+          </button>
+          <div class="answer-panel">
+            <div>
+              <p class="font-sans text-sm text-ink/60 leading-relaxed max-w-xl pb-5">
+                Log into the student portal and go to Registration &gt; Add/Drop. Changes are open without approval during the first two weeks of the term. After that, you'll need a signed override form from your advisor, available at the department office.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item border-b border-ink/10">
+          <button class="faq-question w-full flex items-center justify-between gap-4 text-left py-4" aria-expanded="false">
+            <span class="text-lg">What's the deadline to declare a minor?</span>
+            <span class="mark font-sans text-rust text-xl leading-none shrink-0">+</span>
+          </button>
+          <div class="answer-panel">
+            <div>
+              <p class="font-sans text-sm text-ink/60 leading-relaxed max-w-xl pb-5">
+                Minors can be declared any time before the start of your final semester. We recommend declaring by the end of your sophomore year so prerequisite courses fit your schedule.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item border-b border-ink/10">
+          <button class="faq-question w-full flex items-center justify-between gap-4 text-left py-4" aria-expanded="false">
+            <span class="text-lg">How do I request an official transcript?</span>
+            <span class="mark font-sans text-rust text-xl leading-none shrink-0">+</span>
+          </button>
+          <div class="answer-panel">
+            <div>
+              <p class="font-sans text-sm text-ink/60 leading-relaxed max-w-xl pb-5">
+                Official transcripts are requested through the Registrar's online portal, not the department. Electronic copies typically arrive within 24 hours; mailed copies take 5–7 business days.
+              </p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="mb-2 mt-10">
+      <p class="font-sans text-xs uppercase tracking-widest text-rust mb-2">Courses &amp; Coursework</p>
+      <ul class="faq-list border-t border-ink/10">
+
+        <li class="faq-item border-b border-ink/10">
+          <button class="faq-question w-full flex items-center justify-between gap-4 text-left py-4" aria-expanded="false">
+            <span class="text-lg">Can I take a 400-level course without the listed prerequisite?</span>
+            <span class="mark font-sans text-rust text-xl leading-none shrink-0">+</span>
+          </button>
+          <div class="answer-panel">
+            <div>
+              <p class="font-sans text-sm text-ink/60 leading-relaxed max-w-xl pb-5">
+                Sometimes, with instructor permission. Email the instructor directly with a short note on relevant experience or coursework, and CC your advisor. Approval is granted case by case, not guaranteed.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item border-b border-ink/10">
+          <button class="faq-question w-full flex items-center justify-between gap-4 text-left py-4" aria-expanded="false">
+            <span class="text-lg">Where can I find old exams or practice problems?</span>
+            <span class="mark font-sans text-rust text-xl leading-none shrink-0">+</span>
+          </button>
+          <div class="answer-panel">
+            <div>
+              <p class="font-sans text-sm text-ink/60 leading-relaxed max-w-xl pb-5">
+                Many instructors post past materials on the course page. For a broader archive, the CS Student Association maintains a shared drive — ask any TA for the current link.
+              </p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="mb-2 mt-10">
+      <p class="font-sans text-xs uppercase tracking-widest text-rust mb-2">Research &amp; Careers</p>
+      <ul class="faq-list border-t border-ink/10">
+
+        <li class="faq-item border-b border-ink/10">
+          <button class="faq-question w-full flex items-center justify-between gap-4 text-left py-4" aria-expanded="false">
+            <span class="text-lg">How do I find a faculty member to work with on research?</span>
+            <span class="mark font-sans text-rust text-xl leading-none shrink-0">+</span>
+          </button>
+          <div class="answer-panel">
+            <div>
+              <p class="font-sans text-sm text-ink/60 leading-relaxed max-w-xl pb-5">
+                Browse faculty research pages for areas that interest you, then email 2–3 professors with a specific question about their work, not a general "can I join your lab." Office hours are also a good low-pressure way to introduce yourself.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item border-b border-ink/10">
+          <button class="faq-question w-full flex items-center justify-between gap-4 text-left py-4" aria-expanded="false">
+            <span class="text-lg">Does the department help with internship placement?</span>
+            <span class="mark font-sans text-rust text-xl leading-none shrink-0">+</span>
+          </button>
+          <div class="answer-panel">
+            <div>
+              <p class="font-sans text-sm text-ink/60 leading-relaxed max-w-xl pb-5">
+                The department doesn't place students directly, but our Careers Office hosts recruiting events each fall and spring, and the alumni mentorship list is open to any declared major.
+              </p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+  </div>
+
+  <p id="noResults" class="hidden font-sans text-sm text-ink/60 pt-6">
+    No questions match your search. Try a different word, or contact the department office directly.
+  </p>
+
+</main>
+
+<footer class="max-w-3xl mx-auto px-6 pb-16 font-sans text-sm text-ink/60">
+  Still stuck? Email <a href="mailto:cs-advising@college.edu" class="text-rust hover:underline">cs-advising@college.edu</a> or stop by the department office, Room 214.
+</footer>
+
+<script>
+  // Toggle answer visibility when a question is clicked
+  document.querySelectorAll('.faq-question').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const item = button.closest('.faq-item');
+      const panel = item.querySelector('.answer-panel');
+      const isOpen = item.classList.contains('open');
+
+      item.classList.toggle('open', !isOpen);
+      panel.classList.toggle('open', !isOpen);
+      button.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  // Live search across questions and answers
+  const searchInput = document.getElementById('search');
+  const noResults = document.getElementById('noResults');
+
+  searchInput.addEventListener('input', function () {
+    const term = searchInput.value.trim().toLowerCase();
+    const sections = document.querySelectorAll('#faq-container > section');
+    let anyVisible = false;
+
+    sections.forEach(function (section) {
+      let sectionHasVisible = false;
+
+      section.querySelectorAll('.faq-item').forEach(function (item) {
+        const matches = item.textContent.toLowerCase().includes(term);
+        item.classList.toggle('hidden', !matches);
+        if (matches) { sectionHasVisible = true; anyVisible = true; }
+      });
+
+      section.classList.toggle('hidden', !sectionHasVisible);
+    });
+
+    noResults.classList.toggle('hidden', anyVisible);
+  });
+</script>
+
+</body>
+</html>
