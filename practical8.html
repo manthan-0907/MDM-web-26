@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Portal</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #ff6a88, #8e2de2);
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8e2de2;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: gray;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            border: 2px solid #8e2de2;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #ff6a88, #8e2de2);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Registration</h1>
+
+    <p class="subtitle">College Admission Portal</p>
+
+    <form id="registrationForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name"
+               placeholder="Enter your full name">
+
+        <label>Email</label>
+        <input type="text" id="email"
+               placeholder="Enter your email">
+
+        <label>Password</label>
+        <input type="password" id="password"
+               placeholder="Minimum 6 characters">
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile"
+               placeholder="Enter 10 digit number">
+
+        <label>Course</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>MCA</option>
+            <option>MBA</option>
+        </select>
+
+        <button type="submit">Register Now</button>
+
+        <div id="message"></div>
+
+    </form>
+
+</div>
+
+<script>
+
+document.getElementById("registrationForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let mobile = document.getElementById("mobile").value.trim();
+    let course = document.getElementById("course").value;
+    let message = document.getElementById("message");
+
+    // Check mandatory fields
+    if (name == "" || email == "" || password == "" ||
+        mobile == "" || course == "") {
+
+        message.style.color = "red";
+        message.innerHTML = "⚠ Please fill all fields.";
+        return;
+    }
+
+    // Email validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+
+        message.style.color = "red";
+        message.innerHTML = "⚠ Enter a valid email address.";
+        return;
+    }
+
+    // Password validation
+    if (password.length < 6) {
+
+        message.style.color = "red";
+        message.innerHTML =
+            "⚠ Password must contain at least 6 characters.";
+        return;
+    }
+
+    // Mobile validation
+    let mobilePattern = /^[0-9]{10}$/;
+
+    if (!mobilePattern.test(mobile)) {
+
+        message.style.color = "red";
+        message.innerHTML =
+            "⚠ Enter a valid 10 digit mobile number.";
+        return;
+    }
+
+    // Successful registration
+    message.style.color = "green";
+    message.innerHTML =
+        "✓ Registration Successful!";
+
+});
+
+</script>
+
+</body>
+</html>
+
+
